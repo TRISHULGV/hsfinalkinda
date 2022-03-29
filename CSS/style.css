@@ -1,0 +1,2481 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Inconsolata&family=Libre+Franklin:wght@300&family=Montserrat:wght@300&family=Roboto+Mono:wght@200&family=Titillium+Web:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Inconsolata&family=Libre+Franklin:wght@300&family=Montserrat:wght@300&family=Redressed&family=Roboto+Mono:wght@200&family=Titillium+Web:wght@300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    color: #333;
+    overflow-x: hidden;
+}
+:root{
+    --primary-font: 'Titillium Web', sans-serif;
+    --secondary-font: 'Redressed', cursive;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+/* loader */
+#loader{
+    background: #fff url(../loading.gif) no-repeat center center;
+    height: 100vh;
+    background-size: 10%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+/* hamburger menu */
+.ham > h1{
+    text-align: center; 
+    line-height: 2;
+} 
+.ham > h1 > a{
+    color: #333;
+}
+.ham > ul > li > a{
+    color: #333;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    width: 100px;
+    margin-left: 60px;
+}
+.open{
+    background: url(../menuu.svg) center center/ cover !important;
+    border: none;
+    margin-left: 5px;
+    margin-top: 10px;
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+.close{
+    background: url(../close.png) center center / cover;
+    border: none;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+}
+.ham{
+    width: 350px;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    left:-350px;
+}
+/* navbar */
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255,255, 255, 0.65);
+    position: fixed;
+}
+.us{
+    float: right;
+    margin: 30px;
+    color: #333;
+    font-weight: 800;
+    border-bottom: 1px #333 solid;
+    transition: all 0.2s ease-in-out;
+}
+nav a:hover,
+nav a:active{
+    transform: translateY(-5px);
+}
+.logo{
+    background: url(../IMG/logo.png) no-repeat center center/ cover;
+    width: 125px;
+    margin-left: 35px;
+    height: 90px;
+}
+/* home page */
+section 
+#home{
+    height: 100vh;
+    width: 100vw;
+}
+#home
+{
+    background: url(../IMG/background.jpg) no-repeat center center / cover;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+#home h1
+    {
+    font-family: var(--primary-font);
+    font-size: 30px;
+    color: black;
+}
+#home a{
+    color: #333;
+    font-family: var(--primary-font);
+    background-color: rgba(255,255, 255, 0.35);
+    border: 1px #333 solid;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+/* page 2 */
+#page2{
+    width: 100vw;
+}
+#page2 h1,
+#page3 h1{
+    font-family: var(--primary-font);
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+} 
+#page2 h2{
+    display: block;
+}
+.img-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.img1{
+    background: url(../IMG/chikamagloor.jpg) no-repeat center center / cover;
+}
+.img1::after{
+    content: "HomeStays In Chikmagalur";
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50%;
+    font-weight: 600;
+}
+.img2{
+    background: url(../IMG/coorg.jpg) no-repeat center center/ cover;
+}
+.img2::after{
+    content: "HomeStays In Coorg";
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50%;
+    font-weight: 600;
+}
+.img3{
+    background: url(../IMG/sakleshpoora.jpg) no-repeat center center/ cover;
+}
+.img3::after{
+    content: "HomeStays In Sakleshpoora";
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50%;
+    font-weight: 600;
+}
+.img4{
+    background: url(../IMG/gokarna.jpg) no-repeat center center/ cover;
+}
+.img4::after{
+    content: "HomeStays In Gokarna";
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50%;
+    font-weight: 600;
+}
+.img5{
+    background: url(../IMG/pchikmaglur/ayylake.jpg) no-repeat center center/ cover;
+}
+.img5::after{
+    content: "Places to visit in chikmaglur";
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50%;
+    font-weight: 600;
+}
+.img6{
+    background: url(../IMG/pcoorg/AbbeyFalls.jpg) no-repeat center center/ cover;
+}
+.img6::after{
+    content: "Places to visit in coorg";
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50%;
+    font-weight: 600;
+}
+.img7{
+    background: url(../IMG/psakleshpoora/BisleviewPoint.jpg) no-repeat center center/ cover;
+}
+.img7::after{
+    content: "Places to visit in sakleshpoora";
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50%;
+    font-weight: 600;
+}
+.img{
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    border: #333 2px solid;
+}
+.img a{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 95%;
+    margin-left: 10%;
+}
+#page2 a{
+    background: #fff;
+    color: #333;
+    padding: 10px 30px;
+    font-family: var(--primary-font);
+    border: #333 2px solid;
+    font-weight: bolder;
+}
+/* about us */
+#about{
+    font-family: var(--primary-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#about h1{
+    font-size: 30px;
+    line-height: 3;
+}
+#about p{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 2;
+}
+#about > a{
+    background-color: rgb(85, 81, 81);
+    padding: 10px 15px;
+    color: #fff;
+    margin-top: 10px;
+}
+/* chikmaglur */
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+}
+.img a{
+    background-color: #fff;
+    border: #333 3px solid;
+    color: #333;
+    font-weight: 800;
+    padding: 10px 30px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 95%;
+    margin-left: 10%;
+}
+/* budget */
+/* stay1 */
+.stay1{
+    background: url(../IMG/chikmaglur/homestay1.b/hs.jpeg) no-repeat center center / cover;}
+    .stay2{
+        background: url(../IMG/chikmaglur/homestay4.b/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay3{
+        background: url(../IMG/chikmaglur/homestay6.b/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay4{
+        background: url(../IMG/chikmaglur/homestay7.b/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay5{
+        background: url(../IMG/chikmaglur/homestay8.b/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay6{
+        background: url(../IMG/chikmaglur/homestay10.b/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay7{
+        background: url(../IMG/chikmaglur/homestay11.b/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay8{
+        background: url(../IMG/chikmaglur/homestay12.b/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay9{
+        background: url(../IMG/chikmaglur/homestay14.b/hs.jpeg) no-repeat center center / cover;
+    }
+    /* premium */
+    .stay10{
+        background: url(../IMG/chikmaglur/homestay2.p/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay11{
+        background: url(../IMG/chikmaglur/homestay3.p/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay12{
+        background: url(../IMG/chikmaglur/homestay5.p/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay13{
+        background: url(../IMG/chikmaglur/homestay9.p/hs.jpeg) no-repeat center center / cover;
+    }
+    .stay14{
+        background: url(../IMG/chikmaglur/homestay13.p/hs.jpeg) no-repeat center center / cover;
+    }  
+    #chs1{
+        width: 100vw;
+        height: 100vh;
+        background: url(../IMG/chikmaglur/homestay1.b/hs.jpeg) no-repeat center center / cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .main-heading{
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .main-heading > h1{
+        margin: 20px 20px;
+        color: white;
+        font-family: var(--primary-font);
+        font-weight: 800;
+    }
+    .main-heading > h2{
+        margin: 10px;
+        color: white;
+        font-family: var(--primary-font);
+        font-weight: 600;
+    }
+        
+    
+    .chsimg{
+        width: 300px;
+        height: 300px;
+        border: none;
+        margin: 7px;
+        transition: all 0.5s ease-in-out;
+    }
+    .chsimg:hover,
+    .chsimg:active{
+        width: 350px;
+        height: 400px;
+    }
+    .heading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .img-wraper{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .light{
+        font-size: 20px;
+        padding: 10px 30px;
+        border: #333 3px solid;
+        background-color: #fff;
+        color: #333;
+        font-weight: bolder;
+        transition: all 0.5s ease-in-out;
+    }
+    .light:hover,
+    .light:active{
+        outline: none;
+        background: transparent;
+        color: #fff;
+    }
+
+    .main-details{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .main-details p{
+        line-height: 2rem ;
+        font-weight: 600;
+    }
+    .rowp{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+    .rowp li{
+        list-style-type: disc;
+        font-weight: 600;
+
+    }
+    /* chikmaglur hs1 img */
+
+    .chs1img1{
+        background: url(../IMG/chikmaglur/homestay1.b/1.jpeg) no-repeat center center / cover;
+    }
+    .chs1img2{
+        background: url(../IMG/chikmaglur/homestay1.b/2.jpeg) no-repeat center center / cover;
+    }
+    .chs1img3{
+        background: url(../IMG/chikmaglur/homestay1.b/3.jpeg) no-repeat center center / cover;
+    }
+    .chs1img4{
+        background: url(../IMG/chikmaglur/homestay1.b/4.jpeg) no-repeat center center / cover;
+    }
+    .chs1img5{
+        background: url(../IMG/chikmaglur/homestay1.b/5.jpeg) no-repeat center center / cover;
+    }
+    .chs1img6{
+        background: url(../IMG/chikmaglur/homestay1.b/6.jpeg) no-repeat center center / cover;
+    }
+    .chs1img7{
+        background: url(../IMG/chikmaglur/homestay1.b/7.jpeg) no-repeat center center / cover;
+    }
+    .chs1img8{
+        background: url(../IMG/chikmaglur/homestay1.b/8.jpeg) no-repeat center center / cover;
+    }
+    .chs1img9{
+        background: url(../IMG/chikmaglur/homestay1.b/9.jpeg) no-repeat center center / cover;
+    }
+    .chs1img10{
+        background: url(../IMG/chikmaglur/homestay1.b/10.jpeg) no-repeat center center / cover;
+    }
+    .chs1img11{
+        background: url(../IMG/chikmaglur/homestay1.b/11.jpeg) no-repeat center center / cover;
+    }
+    .chs1img12{
+        background: url(../IMG/chikmaglur/homestay1.b/12.jpeg) no-repeat center center / cover;
+    }
+    .chs1img13{
+        background: url(../IMG/chikmaglur/homestay1.b/13.jpeg) no-repeat center center / cover;
+    }
+    .chs1img14{
+        background: url(../IMG/chikmaglur/homestay1.b/14.jpeg) no-repeat center center / cover;
+    }
+    .chs1img15{
+        background: url(../IMG/chikmaglur/homestay1.b/15.jpeg) no-repeat center center / cover;
+    }
+    .chs1img16{
+        background: url(../IMG/chikmaglur/homestay1.b/16.jpeg) no-repeat center center / cover;
+    }
+    /* chikmaglur hs2 img */
+    #chs2{
+        background: url(../IMG/chikmaglur/homestay2.p/hs.jpeg) no-repeat center center / cover;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .chs2img1{
+        background: url(../IMG/chikmaglur/homestay2.p/0.jpeg) no-repeat center center / cover;
+    }
+    .chs2img2{
+        background: url(../IMG/chikmaglur/homestay2.p/1.jpeg) no-repeat center center / cover;
+    }
+    .chs2img3{
+        background: url(../IMG/chikmaglur/homestay2.p/2.jpeg) no-repeat center center / cover;
+    }
+    .chs2img4{
+        background: url(../IMG/chikmaglur/homestay2.p/3.jpeg) no-repeat center center / cover;
+    }
+    .chs2img5{
+        background: url(../IMG/chikmaglur/homestay2.p/4.jpeg) no-repeat center center / cover;
+    }
+    .chs2img6{
+        background: url(../IMG/chikmaglur/homestay2.p/5.jpeg) no-repeat center center / cover;
+    }
+    .chs2img8{
+        background: url(../IMG/chikmaglur/homestay2.p/7.jpeg) no-repeat center center / cover;
+    }
+    .chs2img9{
+        background: url(../IMG/chikmaglur/homestay2.p/8.jpeg) no-repeat center center / cover;
+    }
+    .chs2img10{
+        background: url(../IMG/chikmaglur/homestay2.p/9.jpeg) no-repeat center center / cover;
+    }
+    .chs2img11{
+        background: url(../IMG/chikmaglur/homestay2.p/10.jpeg) no-repeat center center / cover;
+    }
+    .chs2img12{
+        background: url(../IMG/chikmaglur/homestay2.p/11.jpeg) no-repeat center center / cover;
+    }
+    .chs2img13{
+        background: url(../IMG/chikmaglur/homestay2.p/12.jpeg) no-repeat center center / cover;
+    }
+    .chs2img14{
+        background: url(../IMG/chikmaglur/homestay2.p/13.jpeg) no-repeat center center / cover;
+    }
+    .chs2img15{
+        background: url(../IMG/chikmaglur/homestay2.p/14.jpeg) no-repeat center center / cover;
+    }
+    .chs2img16{
+        background: url(../IMG/chikmaglur/homestay2.p/15.jpeg) no-repeat center center / cover;
+    }
+    .chs2img17{
+        background: url(../IMG/chikmaglur/homestay2.p/16.jpeg) no-repeat center center / cover;
+    }
+    /* chikmaglur HOmestay 3 images premium */
+    #chs3{
+        background: url(../IMG/chikmaglur/homestay3.p/hs.jpeg) no-repeat center center / cover;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .chs3img1{
+        background: url(../IMG/chikmaglur/homestay3.p/1.jpeg) no-repeat center center / cover;
+    }
+    .chs3img2{
+        background: url(../IMG/chikmaglur/homestay3.p/2.jpeg) no-repeat center center / cover;
+    }
+    .chs3img3{
+        background: url(../IMG/chikmaglur/homestay3.p/3.jpeg) no-repeat center center / cover;
+    }
+    .chs3img4{
+        background: url(../IMG/chikmaglur/homestay3.p/4.jpeg) no-repeat center center / cover;
+    }
+    .chs3img5{
+        background: url(../IMG/chikmaglur/homestay3.p/5.jpeg) no-repeat center center / cover;
+    }
+    .chs3img6{
+        background: url(../IMG/chikmaglur/homestay3.p/6.jpeg) no-repeat center center / cover;
+    }
+    .chs3img7{
+        background: url(../IMG/chikmaglur/homestay3.p/7.jpeg) no-repeat center center / cover;
+    }
+    .chs3img8{
+        background: url(../IMG/chikmaglur/homestay3.p/8.jpeg) no-repeat center center / cover;
+    }
+    .chs3img9{
+        background: url(../IMG/chikmaglur/homestay3.p/9.jpeg) no-repeat center center / cover;
+    }
+    .chs3img10{
+        background: url(../IMG/chikmaglur/homestay3.p/10.jpeg) no-repeat center center / cover;
+    }
+    .chs3img11{
+        background: url(../IMG/chikmaglur/homestay3.p/11.jpeg) no-repeat center center / cover;
+    }
+    .chs3img12{
+        background: url(../IMG/chikmaglur/homestay3.p/12.jpeg) no-repeat center center / cover;
+    }
+    .chs3img13{
+        background: url(../IMG/chikmaglur/homestay3.p/13.jpeg) no-repeat center center / cover;
+    }
+    /*chikmaglur homestay 4 budget */
+    #chs4{
+        background: url(../IMG/chikmaglur/homestay4.b/hs.jpeg) no-repeat center center / cover;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .chs4img1{
+        background: url(../IMG/chikmaglur/homestay4.b/1.jpeg) no-repeat center center / cover;
+    }
+    .chs4img2{
+        background: url(../IMG/chikmaglur/homestay4.b/2.jpeg) no-repeat center center / cover;
+    }
+    .chs4img3{
+        background: url(../IMG/chikmaglur/homestay4.b/3.jpeg) no-repeat center center / cover;
+    }
+    /* chikmaglur homestay 5 premium */
+    #chs5{
+        background: url(../IMG/chikmaglur/homestay5.p/hs.jpeg) no-repeat center center / cover;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .chs5img1{
+        background: url(../IMG/chikmaglur/homestay5.p/1.jpeg) no-repeat center center / cover;
+    }
+    .chs5img2{
+        background: url(../IMG/chikmaglur/homestay5.p/2.jpeg) no-repeat center center / cover;
+    }
+    .chs5img3{
+        background: url(../IMG/chikmaglur/homestay5.p/3.jpeg) no-repeat center center / cover;
+    }
+    .chs5img4{
+        background: url(../IMG/chikmaglur/homestay5.p/4.jpeg) no-repeat center center / cover;
+    }
+    .chs5img5{
+        background: url(../IMG/chikmaglur/homestay5.p/5.jpeg) no-repeat center center / cover;
+    }
+    .chs5img6{
+        background: url(../IMG/chikmaglur/homestay5.p/6.jpeg) no-repeat center center / cover;
+    }
+    .chs5img7{
+        background: url(../IMG/chikmaglur/homestay5.p/7.jpeg) no-repeat center center / cover;
+    }
+    .chs5img8{
+        background: url(../IMG/chikmaglur/homestay5.p/8.jpeg) no-repeat center center / cover;
+    }
+    .chs5img9{
+        background: url(../IMG/chikmaglur/homestay5.p/9.jpeg) no-repeat center center / cover;
+    }
+    .chs5img10{
+        background: url(../IMG/chikmaglur/homestay5.p/10.jpeg) no-repeat center center / cover;
+    }
+    .chs5img11{
+        background: url(../IMG/chikmaglur/homestay5.p/11.jpeg) no-repeat center center / cover;
+    }
+    .chs5img12{
+        background: url(../IMG/chikmaglur/homestay5.p/12.jpeg) no-repeat center center / cover;
+    }
+    .chs5img13{
+        background: url(../IMG/chikmaglur/homestay5.p/13.jpeg) no-repeat center center / cover;
+    }
+    .chs5img14{
+        background: url(../IMG/chikmaglur/homestay5.p/14.jpeg) no-repeat center center / cover;
+    }
+    .chs5img15{
+        background: url(../IMG/chikmaglur/homestay5.p/15.jpeg) no-repeat center center / cover;
+    }
+    .chs5img16{
+        background: url(../IMG/chikmaglur/homestay5.p/16.jpeg) no-repeat center center / cover;
+    }
+    .chs5img17{
+        background: url(../IMG/chikmaglur/homestay5.p/17.jpeg) no-repeat center center / cover;
+    }
+    /*chikmaglur homestay6  Budget  */
+    #chs6{
+        background: url(../IMG/chikmaglur/homestay6.b/hs.jpeg) no-repeat center center / cover;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .chs6img1{
+        background: url(../IMG/chikmaglur/homestay6.b/1.jpeg) no-repeat center center / cover;
+    }
+    .chs6img2{
+        background: url(../IMG/chikmaglur/homestay6.b/2.jpeg) no-repeat center center / cover;
+    }
+    .chs6img3{
+        background: url(../IMG/chikmaglur/homestay6.b/3.jpeg) no-repeat center center / cover;
+    }
+    .chs6img4{
+        background: url(../IMG/chikmaglur/homestay6.b/4.jpeg) no-repeat center center / cover;
+    }
+    .chs6img5{
+        background: url(../IMG/chikmaglur/homestay6.b/5.jpeg) no-repeat center center / cover;
+    }
+    .chs6img6{
+        background: url(../IMG/chikmaglur/homestay6.b/6.jpeg) no-repeat center center / cover;
+    }
+    .chs6img7{
+        background: url(../IMG/chikmaglur/homestay6.b/7.jpeg) no-repeat center center / cover;
+    }
+    .chs6img8{
+        background: url(../IMG/chikmaglur/homestay6.b/8.jpeg) no-repeat center center / cover;
+    }
+    .chs6img9{
+        background: url(../IMG/chikmaglur/homestay6.b/9.jpeg) no-repeat center center / cover;
+    }
+    .chs6img10{
+        background: url(../IMG/chikmaglur/homestay6.b/10.jpeg) no-repeat center center / cover;
+    }
+    .chs6img11{
+        background: url(../IMG/chikmaglur/homestay6.b/11.jpeg) no-repeat center center / cover;
+    }
+    .chs6img12{
+        background: url(../IMG/chikmaglur/homestay6.b/12.jpeg) no-repeat center center / cover;
+    }
+    /* chikmaglur homestay 7 budget */
+    #chs7{
+        background: url(../IMG/chikmaglur/homestay7.b/hs.jpeg) no-repeat center center / cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        width: 100vw;
+    }
+    .chs7img1{
+        background: url(../IMG/chikmaglur/homestay7.b/1.jpeg) no-repeat center center / cover;
+    }
+    .chs7img2{
+        background: url(../IMG/chikmaglur/homestay7.b/2.jpeg) no-repeat center center / cover;
+    }
+    .chs7img3{
+        background: url(../IMG/chikmaglur/homestay7.b/3.jpeg) no-repeat center center / cover;
+    }
+    .chs7img4{
+        background: url(../IMG/chikmaglur/homestay7.b/4.jpeg) no-repeat center center / cover;
+    }
+    .chs7img5{
+        background: url(../IMG/chikmaglur/homestay7.b/5.jpeg) no-repeat center center / cover;
+    }
+    .chs7img6{
+        background: url(../IMG/chikmaglur/homestay7.b/6.jpeg) no-repeat center center / cover;
+    }
+    .chs7img7{
+        background: url(../IMG/chikmaglur/homestay7.b/7.jpeg) no-repeat center center / cover;
+    }
+    .chs7img8{
+        background: url(../IMG/chikmaglur/homestay7.b/8.jpeg) no-repeat center center / cover;
+    }
+    .chs7img9{
+        background: url(../IMG/chikmaglur/homestay7.b/9.jpeg) no-repeat center center / cover;
+    }
+    .chs7img10{
+        background: url(../IMG/chikmaglur/homestay7.b/10.jpeg) no-repeat center center / cover;
+    }
+    .chs7img11{
+        background: url(../IMG/chikmaglur/homestay7.b/11.jpeg) no-repeat center center / cover;
+    }
+    /* chikmaglur homestay 8 budget */
+    #chs8{
+        background: url(../IMG/chikmaglur/homestay8.b/hs.jpeg) no-repeat center center / cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        width: 100vw;
+    }
+    .chs8img1{
+        background: url(../IMG/chikmaglur/homestay8.b/1.jpeg) no-repeat center center / cover;
+    }
+    .chs8img2{
+        background: url(../IMG/chikmaglur/homestay8.b/2.jpeg) no-repeat center center / cover;
+    }
+    .chs8img3{
+        background: url(../IMG/chikmaglur/homestay8.b/3.jpeg) no-repeat center center / cover;
+    }
+    .chs8img4{
+        background: url(../IMG/chikmaglur/homestay8.b/4.jpeg) no-repeat center center / cover;
+    }
+    .chs8img5{
+        background: url(../IMG/chikmaglur/homestay8.b/5.jpeg) no-repeat center center / cover;
+    }
+    .chs8img6{
+        background: url(../IMG/chikmaglur/homestay8.b/6.jpeg) no-repeat center center / cover;
+    }
+    .chs8img7{
+        background: url(../IMG/chikmaglur/homestay8.b/7.jpeg) no-repeat center center / cover;
+    }
+    .chs8img8{
+        background: url(../IMG/chikmaglur/homestay8.b/8.jpeg) no-repeat center center / cover;
+    }
+    .chs8img9{
+        background: url(../IMG/chikmaglur/homestay8.b/9.jpeg) no-repeat center center / cover;
+    }
+    /*chikmaglur homestay 9 premium */
+    #chs9{
+        background: url(../IMG/chikmaglur/homestay9.p/hs.jpeg) no-repeat center center / cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        width: 100vw;
+    }
+    .chs9img1{
+        background: url(../IMG/chikmaglur/homestay9.p/1.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img2{
+        background: url(../IMG/chikmaglur/homestay9.p/2.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img3{
+        background: url(../IMG/chikmaglur/homestay9.p/3.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img4{
+        background: url(../IMG/chikmaglur/homestay9.p/4.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img5{
+        background: url(../IMG/chikmaglur/homestay9.p/5.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img6{
+        background: url(../IMG/chikmaglur/homestay9.p/6.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img7{
+        background: url(../IMG/chikmaglur/homestay9.p/7.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img8{
+        background: url(../IMG/chikmaglur/homestay9.p/8.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img9{
+        background: url(../IMG/chikmaglur/homestay9.p/9.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img10{
+        background: url(../IMG/chikmaglur/homestay9.p/10.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img11{
+        background: url(../IMG/chikmaglur/homestay9.p/11.jpeg) no-repeat center center / cover ;
+    }
+    .chs9img12{
+        background: url(../IMG/chikmaglur/homestay9.p/12.jpeg) no-repeat center center / cover ;
+    }
+    /*chikmaglur homestay 10 budget */
+    #chs10{
+        background: url(../IMG/chikmaglur/homestay10.b/hs.jpeg) no-repeat center center / cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        width: 100vw;
+    }
+    .chs10img1{
+        background: url(../IMG/chikmaglur/homestay10.b/1.jpeg) no-repeat center center / cover ;
+    }
+    .chs10img2{
+        background: url(../IMG/chikmaglur/homestay10.b/2.jpeg) no-repeat center center / cover ;
+    }
+    .chs10img3{
+        background: url(../IMG/chikmaglur/homestay10.b/3.jpeg) no-repeat center center / cover ;
+    }
+    .chs10img4{
+        background: url(../IMG/chikmaglur/homestay10.b/4.jpeg) no-repeat center center / cover ;
+    }
+    .chs10img5{
+        background: url(../IMG/chikmaglur/homestay10.b/5.jpeg) no-repeat center center / cover ;
+    }
+    .chs10img6{
+        background: url(../IMG/chikmaglur/homestay10.b/6.jpeg) no-repeat center center / cover ;
+    }
+    .chs10img7{
+        background: url(../IMG/chikmaglur/homestay10.b/7.jpeg) no-repeat center center / cover ;
+    }
+    .chs10img8{
+        background: url(../IMG/chikmaglur/homestay10.b/8.jpeg) no-repeat center center / cover ;
+    }
+    .chs10img9{
+        background: url(../IMG/chikmaglur/homestay10.b/9.jpeg) no-repeat center center / cover ;
+    }
+    .chs10img10{
+        background: url(../IMG/chikmaglur/homestay10.b/10.jpeg) no-repeat center center / cover ;
+    }
+    .chs10img11{
+        background: url(../IMG/chikmaglur/homestay10.b/11.jpeg) no-repeat center center / cover ;
+    }
+/* chikmaglur Homestay 11 budget */
+#chs11{
+    background: url(../IMG/chikmaglur/homestay11.b/hs.jpeg) no-repeat center center / cover;
+    height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        width: 100vw;
+}
+.chs11img1{
+    background: url(../IMG/chikmaglur/homestay11.b/1.jpeg) no-repeat center center / cover;
+}
+.chs11img2{
+    background: url(../IMG/chikmaglur/homestay11.b/2.jpeg) no-repeat center center / cover;
+}
+.chs11img3{
+    background: url(../IMG/chikmaglur/homestay11.b/3.jpeg) no-repeat center center / cover;
+}
+.chs11img5{
+    background: url(../IMG/chikmaglur/homestay11.b/5.jpeg) no-repeat center center / cover;
+}
+.chs11img6{
+    background: url(../IMG/chikmaglur/homestay11.b/6.jpeg) no-repeat center center / cover;
+}
+.chs11img7{
+    background: url(../IMG/chikmaglur/homestay11.b/7.jpeg) no-repeat center center / cover;
+}
+.chs11img8{
+    background: url(../IMG/chikmaglur/homestay11.b/8.jpeg) no-repeat center center / cover;
+}
+.chs11img9{
+    background: url(../IMG/chikmaglur/homestay11.b/9.jpeg) no-repeat center center / cover;
+}
+.chs11img10{
+    background: url(../IMG/chikmaglur/homestay11.b/10.jpeg) no-repeat center center / cover;
+}
+/* chikmaglur homestay12 budget */
+#chs12{
+    background: url(../IMG/chikmaglur/homestay12.b/hs.jpeg) no-repeat center center / cover;
+    height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        width: 100vw;
+}
+.chs12img1{
+    background: url(../IMG/chikmaglur/homestay12.b/1.jpeg) no-repeat center center / cover;
+}
+.chs12img2{
+    background: url(../IMG/chikmaglur/homestay12.b/2.jpeg) no-repeat center center / cover;
+}
+.chs12img3{
+    background: url(../IMG/chikmaglur/homestay12.b/3.jpeg) no-repeat center center / cover;
+}
+.chs12img4{
+    background: url(../IMG/chikmaglur/homestay12.b/4.jpeg) no-repeat center center / cover;
+}
+.chs12img5{
+    background: url(../IMG/chikmaglur/homestay12.b/5.jpeg) no-repeat center center / cover;
+}
+.chs12img6{
+    background: url(../IMG/chikmaglur/homestay12.b/6.jpeg) no-repeat center center / cover;
+}
+.chs12img7{
+    background: url(../IMG/chikmaglur/homestay12.b/7.jpeg) no-repeat center center / cover;
+}
+.chs12img8{
+    background: url(../IMG/chikmaglur/homestay12.b/8.jpeg) no-repeat center center / cover;
+}
+.chs12img9{
+    background: url(../IMG/chikmaglur/homestay12.b/9.jpeg) no-repeat center center / cover;
+}
+.chs12img10{
+    background: url(../IMG/chikmaglur/homestay12.b/10.jpeg) no-repeat center center / cover;
+}
+.chs12img11{
+    background: url(../IMG/chikmaglur/homestay12.b/11.jpeg) no-repeat center center / cover;
+}
+.chs12img12{
+    background: url(../IMG/chikmaglur/homestay12.b/12.jpeg) no-repeat center center / cover;
+}
+.chs12img13{
+    background: url(../IMG/chikmaglur/homestay12.b/13.jpeg) no-repeat center center / cover;
+}
+.chs12img14{
+    background: url(../IMG/chikmaglur/homestay12.b/14.jpeg) no-repeat center center / cover;
+}
+.chs12img15{
+    background: url(../IMG/chikmaglur/homestay12.b/15.jpeg) no-repeat center center / cover;
+}
+/* chikamglur Homestay13 premium */
+#chs13{
+    background: url(../IMG/chikmaglur/homestay13.p/hs.jpeg) no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.chs13img1{
+    background: url(../IMG/chikmaglur/homestay13.p/1.jpeg) no-repeat center center / cover;
+}
+.chs13img2{
+    background: url(../IMG/chikmaglur/homestay13.p/2.jpeg) no-repeat center center / cover;
+}
+.chs13img3{
+    background: url(../IMG/chikmaglur/homestay13.p/3.jpeg) no-repeat center center / cover;
+}
+.chs13img4{
+    background: url(../IMG/chikmaglur/homestay13.p/4.jpeg) no-repeat center center / cover;
+}
+.chs13img5{
+    background: url(../IMG/chikmaglur/homestay13.p/5.jpeg) no-repeat center center / cover;
+}
+.chs13img6{
+    background: url(../IMG/chikmaglur/homestay13.p/6.jpeg) no-repeat center center / cover;
+}
+.chs13img7{
+    background: url(../IMG/chikmaglur/homestay13.p/7.jpeg) no-repeat center center / cover;
+}
+.chs13img8{
+    background: url(../IMG/chikmaglur/homestay13.p/8.jpeg) no-repeat center center / cover;
+}
+.chs13img9{
+    background: url(../IMG/chikmaglur/homestay13.p/9.jpeg) no-repeat center center / cover;
+}
+.chs13img10{
+    background: url(../IMG/chikmaglur/homestay13.p/10.jpeg) no-repeat center center / cover;
+}
+.chs13img11{
+    background: url(../IMG/chikmaglur/homestay13.p/11.jpeg) no-repeat center center / cover;
+}
+/* chikmaglur homestay14 budget */
+#chs14{
+    background: url(../IMG/chikmaglur/homestay14.b/hs.jpeg) no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.chs14img1{
+    background: url(../IMG/chikmaglur/homestay14.b/1.jpeg) no-repeat center center / cover;
+}
+.chs14img2{
+    background: url(../IMG/chikmaglur/homestay14.b/2.jpeg) no-repeat center center / cover;
+}
+.chs14img3{
+    background: url(../IMG/chikmaglur/homestay14.b/3.jpeg) no-repeat center center / cover;
+}
+.chs14img4{
+    background: url(../IMG/chikmaglur/homestay14.b/4.jpeg) no-repeat center center / cover;
+}
+.chs14img5{
+    background: url(../IMG/chikmaglur/homestay14.b/5.jpeg) no-repeat center center / cover;
+}
+.chs14img6{
+    background: url(../IMG/chikmaglur/homestay14.b/6.jpeg) no-repeat center center / cover;
+}
+.chs14img7{
+    background: url(../IMG/chikmaglur/homestay14.b/7.jpeg) no-repeat center center / cover;
+}
+.chs14img8{
+    background: url(../IMG/chikmaglur/homestay14.b/8.jpeg) no-repeat center center / cover;
+}
+.chs14img9{
+    background: url(../IMG/chikmaglur/homestay14.b/9.jpeg) no-repeat center center / cover;
+}
+.chs14img10{
+    background: url(../IMG/chikmaglur/homestay14.b/10.jpeg) no-repeat center center / cover;
+}
+.chs14img11{
+    background: url(../IMG/chikmaglur/homestay14.b/11.jpeg) no-repeat center center / cover;
+}
+.chs14img12{
+    background: url(../IMG/chikmaglur/homestay14.b/12.jpeg) no-repeat center center / cover;
+}
+.chs14img13{
+    background: url(../IMG/chikmaglur/homestay14.b/13.jpeg) no-repeat center center / cover;
+}
+.chs14img14{
+    background: url(../IMG/chikmaglur/homestay14.b/14.jpeg) no-repeat center center / cover;
+}
+.chs14img15{
+    background: url(../IMG/chikmaglur/homestay14.b/15.jpeg) no-repeat center center / cover;
+}
+/* sakleshpoora */
+.sstay1{
+    background: url(../IMG/sakleshpoora/homestay1/hs.jpeg) no-repeat center center / cover;
+}
+.sstay2{
+    background: url(../IMG/sakleshpoora/homestay2/hs.jpeg) no-repeat center center / cover;
+}
+.sstay3{
+    background: url(../IMG/sakleshpoora/homestay3/hs.jpeg) no-repeat center center / cover;
+}
+.sstay4{
+    background: url(../IMG/sakleshpoora/homestay4/hs.jpeg) no-repeat center center / cover;
+}
+.sstay5{
+    background: url(../IMG/sakleshpoora/homestay5/hs.jpeg) no-repeat center center / cover;
+}
+.sstay6{
+    background: url(../IMG/sakleshpoora/homestay6/hs.jpeg) no-repeat center center / cover;
+}
+.sstay7{
+    background: url(../IMG/sakleshpoora/homestay7/hs.jpeg) no-repeat center center / cover;
+}
+/* homestay 1 sakleshpoora */
+#shs1{
+    background: url(../IMG/sakleshpoora/homestay1/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.shs1img1{
+    background: url(../IMG/sakleshpoora/homestay1/1.jpeg) no-repeat center center / cover;
+}
+.shs1img2{
+    background: url(../IMG/sakleshpoora/homestay1/2.jpeg) no-repeat center center / cover;
+}
+.shs1img3{
+    background: url(../IMG/sakleshpoora/homestay1/3.jpeg) no-repeat center center / cover;
+}
+.shs1img4{
+    background: url(../IMG/sakleshpoora/homestay1/4.jpeg) no-repeat center center / cover;
+}
+.shs1img5{
+    background: url(../IMG/sakleshpoora/homestay1/5.jpeg) no-repeat center center / cover;
+}
+.shs1img6{
+    background: url(../IMG/sakleshpoora/homestay1/6.jpeg) no-repeat center center / cover;
+}
+.shs1img7{
+    background: url(../IMG/sakleshpoora/homestay1/7.jpeg) no-repeat center center / cover;
+}
+.shs1img8{
+    background: url(../IMG/sakleshpoora/homestay1/8.jpeg) no-repeat center center / cover;
+}
+.shs1img9{
+    background: url(../IMG/sakleshpoora/homestay1/9.jpeg) no-repeat center center / cover;
+}
+.shs1img10{
+    background: url(../IMG/sakleshpoora/homestay1/10.jpeg) no-repeat center center / cover;
+}
+.shs1img11{
+    background: url(../IMG/sakleshpoora/homestay1/11.jpeg) no-repeat center center / cover;
+}
+/* homestay2 sakleshpoora */
+#shs2{
+    background: url(../IMG/sakleshpoora/homestay2/5.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.shs2img1{
+    background: url(../IMG/sakleshpoora/homestay2/1.jpeg) no-repeat center center / cover ;
+}
+.shs2img2{
+    background: url(../IMG/sakleshpoora/homestay2/2.jpeg) no-repeat center center / cover ;
+}
+.shs2img3{
+    background: url(../IMG/sakleshpoora/homestay2/3.jpeg) no-repeat center center / cover ;
+}
+.shs2img4{
+    background: url(../IMG/sakleshpoora/homestay2/4.jpeg) no-repeat center center / cover ;
+}
+.shs2img5{
+    background: url(../IMG/sakleshpoora/homestay2/5.jpeg) no-repeat center center / cover ;
+}
+.shs2img6{
+    background: url(../IMG/sakleshpoora/homestay2/6.jpeg) no-repeat center center / cover ;
+}
+.shs2img7{
+    background: url(../IMG/sakleshpoora/homestay2/7.jpeg) no-repeat center center / cover ;
+}
+.shs2img8{
+    background: url(../IMG/sakleshpoora/homestay2/8.jpeg) no-repeat center center / cover ;
+}
+.shs2img9{
+    background: url(../IMG/sakleshpoora/homestay2/9.jpeg) no-repeat center center / cover ;
+}
+.shs2img10{
+    background: url(../IMG/sakleshpoora/homestay2/10.jpeg) no-repeat center center / cover ;
+}
+.shs2img11{
+    background: url(../IMG/sakleshpoora/homestay2/11.jpeg) no-repeat center center / cover ;
+}
+.shs2img12{
+    background: url(../IMG/sakleshpoora/homestay2/12.jpeg) no-repeat center center / cover ;
+}
+.shs2img13{
+    background: url(../IMG/sakleshpoora/homestay2/13.jpeg) no-repeat center center / cover ;
+}
+.shs2img14{
+    background: url(../IMG/sakleshpoora/homestay2/14.jpeg) no-repeat center center / cover ;
+}
+.shs2img15{
+    background: url(../IMG/sakleshpoora/homestay2/15.jpeg) no-repeat center center / cover ;
+}
+/* sakleshpoora Homestay 3 */
+#shs3{
+    background: url(../IMG/sakleshpoora/homestay3/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.shs3img1{
+    background: url(../IMG/sakleshpoora/homestay3/1.jpeg) no-repeat center center / cover;
+}
+.shs3img2{
+    background: url(../IMG/sakleshpoora/homestay3/2.jpeg) no-repeat center center / cover;
+}
+.shs3img3{
+    background: url(../IMG/sakleshpoora/homestay3/3.jpeg) no-repeat center center / cover;
+}
+.shs3img4{
+    background: url(../IMG/sakleshpoora/homestay3/4.jpeg) no-repeat center center / cover;
+}
+.shs3img5{
+    background: url(../IMG/sakleshpoora/homestay3/5.jpeg) no-repeat center center / cover;
+}
+.shs3img6{
+    background: url(../IMG/sakleshpoora/homestay3/6.jpeg) no-repeat center center / cover;
+}
+.shs3img7{
+    background: url(../IMG/sakleshpoora/homestay3/7.jpeg) no-repeat center center / cover;
+}
+/* homestay 4 sakleshpoora */
+#shs4{
+    background: url(../IMG/sakleshpoora/homestay4/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.shs4img1{
+    background: url(../IMG/sakleshpoora/homestay4/1.jpeg) no-repeat center center / cover;
+}
+.shs4img2{
+    background: url(../IMG/sakleshpoora/homestay4/2.jpeg) no-repeat center center / cover;
+}
+.shs4img3{
+    background: url(../IMG/sakleshpoora/homestay4/3.jpeg) no-repeat center center / cover;
+}
+.shs4img4{
+    background: url(../IMG/sakleshpoora/homestay4/4.jpeg) no-repeat center center / cover;
+}
+.shs4img5{
+    background: url(../IMG/sakleshpoora/homestay4/5.jpeg) no-repeat center center / cover;
+}
+.shs4img6{
+    background: url(../IMG/sakleshpoora/homestay4/6.jpeg) no-repeat center center / cover;
+}
+.shs4img7{
+    background: url(../IMG/sakleshpoora/homestay4/7.jpeg) no-repeat center center / cover;
+}
+
+.shs4img8{
+    background: url(../IMG/sakleshpoora/homestay4/8.jpeg) no-repeat center center / cover;
+}
+.shs4img9{
+    background: url(../IMG/sakleshpoora/homestay4/9.jpeg) no-repeat center center / cover;
+}
+.shs4img10{
+    background: url(../IMG/sakleshpoora/homestay4/10.jpeg) no-repeat center center / cover;
+}
+.shs4img11{
+    background: url(../IMG/sakleshpoora/homestay4/11.jpeg) no-repeat center center / cover;
+}
+.shs4img12{
+    background: url(../IMG/sakleshpoora/homestay4/12.jpeg) no-repeat center center / cover;
+}
+.shs4img13{
+    background: url(../IMG/sakleshpoora/homestay4/13.jpeg) no-repeat center center / cover;
+}
+.shs4img14{
+    background: url(../IMG/sakleshpoora/homestay4/14.jpeg) no-repeat center center / cover;
+}
+.shs4img15{
+    background: url(../IMG/sakleshpoora/homestay4/15.jpeg) no-repeat center center / cover;
+}
+.shs4img16{
+    background: url(../IMG/sakleshpoora/homestay4/16.jpeg) no-repeat center center / cover;
+}
+/* homestay 5 sakleshpoora */
+#shs5{
+    background: url(../IMG/sakleshpoora/homestay5/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.shs5img1{
+    background: url(../IMG/sakleshpoora/homestay5/1.jpeg) no-repeat center center / cover;
+}
+.shs5img2{
+    background: url(../IMG/sakleshpoora/homestay5/2.jpeg) no-repeat center center / cover;
+}
+.shs5img3{
+    background: url(../IMG/sakleshpoora/homestay5/3.jpeg) no-repeat center center / cover;
+}
+.shs5img4{
+    background: url(../IMG/sakleshpoora/homestay5/4.jpeg) no-repeat center center / cover;
+}
+.shs5img5{
+    background: url(../IMG/sakleshpoora/homestay5/5.jpeg) no-repeat center center / cover;
+}
+.shs5img6{
+    background: url(../IMG/sakleshpoora/homestay5/6.jpeg) no-repeat center center / cover;
+}
+/* Homestay 6 sakleshpoora */
+#shs6{
+    background: url(../IMG/sakleshpoora/homestay6/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.shs6img1{
+    background: url(../IMG/sakleshpoora/homestay6/1.jpeg) no-repeat center center / cover;
+}
+.shs6img2{
+    background: url(../IMG/sakleshpoora/homestay6/2.jpeg) no-repeat center center / cover;
+}
+.shs6img3{
+    background: url(../IMG/sakleshpoora/homestay6/3.jpeg) no-repeat center center / cover;
+}
+.shs6img4{
+    background: url(../IMG/sakleshpoora/homestay6/4.jpeg) no-repeat center center / cover;
+}
+.shs6img5{
+    background: url(../IMG/sakleshpoora/homestay6/5.jpeg) no-repeat center center / cover;
+}
+.shs6img6{
+    background: url(../IMG/sakleshpoora/homestay6/6.jpeg) no-repeat center center / cover;
+}
+.shs6img7{
+    background: url(../IMG/sakleshpoora/homestay6/7.jpeg) no-repeat center center / cover;
+}
+.shs6img8{
+    background: url(../IMG/sakleshpoora/homestay6/8.jpeg) no-repeat center center / cover;
+}
+/* homestay7 sakleshpoora */
+#shs7{
+    background: url(../IMG/sakleshpoora/homestay7/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.shs7img1{
+    background: url(../IMG/sakleshpoora/homestay7/1.jpeg) no-repeat center center / cover;
+}
+.shs7img2{
+    background: url(../IMG/sakleshpoora/homestay7/2.jpeg) no-repeat center center / cover;
+}
+.shs7img3{
+    background: url(../IMG/sakleshpoora/homestay7/3.jpeg) no-repeat center center / cover;
+}
+.shs7img4{
+    background: url(../IMG/sakleshpoora/homestay7/4.jpeg) no-repeat center center / cover;
+}
+.shs7img5{
+    background: url(../IMG/sakleshpoora/homestay7/5.jpeg) no-repeat center center / cover;
+}
+.shs7img6{
+    background: url(../IMG/sakleshpoora/homestay7/6.jpeg) no-repeat center center / cover;
+}
+.shs7img7{
+    background: url(../IMG/sakleshpoora/homestay7/7.jpeg) no-repeat center center / cover;
+}
+.shs7img8{
+    background: url(../IMG/sakleshpoora/homestay7/8.jpeg) no-repeat center center / cover;
+}
+.shs7img9{
+    background: url(../IMG/sakleshpoora/homestay7/9.jpeg) no-repeat center center / cover;
+}
+.shs7img10{
+    background: url(../IMG/sakleshpoora/homestay7/10.jpeg) no-repeat center center / cover;
+}
+.shs7img11{
+    background: url(../IMG/sakleshpoora/homestay7/11.jpeg) no-repeat center center / cover;
+}
+.shs7img12{
+    background: url(../IMG/sakleshpoora/homestay7/12.jpeg) no-repeat center center / cover;
+}
+.shs7img13{
+    background: url(../IMG/sakleshpoora/homestay7/13.jpeg) no-repeat center center / cover;
+}
+.shs7img14{
+    background: url(../IMG/sakleshpoora/homestay7/14.jpeg) no-repeat center center / cover;
+}
+.shs7img15{
+    background: url(../IMG/sakleshpoora/homestay7/15.jpeg) no-repeat center center / cover;
+}
+.shs7img16{
+    background: url(../IMG/sakleshpoora/homestay7/16.jpeg) no-repeat center center / cover;
+}
+/* coorg Homestay */
+.cstay1{
+    background: url(../IMG/coorg/homestay1/hs.jpeg) no-repeat center center / cover;
+}
+.cstay2{
+    background: url(../IMG/coorg/homestay2/hs.jpeg) no-repeat center center / cover;
+}
+.cstay3{
+    background: url(../IMG/coorg/homestay3/hs.jpeg) no-repeat center center / cover;
+}
+.cstay4{
+    background: url(../IMG/coorg/homestay4/hs.jpeg) no-repeat center center / cover;
+}
+.cstay5{
+    background: url(../IMG/coorg/homestay5/hs.jpeg) no-repeat center center / cover;
+}
+.cstay6{
+    background: url(../IMG/coorg/homestay6/hs.jpeg) no-repeat center center / cover;
+}
+.cstay7{
+    background: url(../IMG/coorg/homestay7/hs.jpeg) no-repeat center center / cover;
+}
+.cstay8{
+    background: url(../IMG/coorg/homestay8/hs.jpeg) no-repeat center center / cover;
+}
+.cstay9{
+    background: url(../IMG/coorg/homestay9/hs.jpeg) no-repeat center center / cover;
+}
+.cstay10{
+    background: url(../IMG/coorg/homestay10/hs.jpeg) no-repeat center center / cover;
+}
+/* coorg homestay 1 */
+#cohs1{
+    background: url(../IMG/coorg/homestay1/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.cohs1img1{
+    background: url(../IMG/coorg/homestay1/1.jpeg) no-repeat center center / cover;
+}
+.cohs1img2{
+    background: url(../IMG/coorg/homestay1/2.jpeg) no-repeat center center / cover;
+}
+.cohs1img3{
+    background: url(../IMG/coorg/homestay1/3.jpeg) no-repeat center center / cover;
+}
+.cohs1img4{
+    background: url(../IMG/coorg/homestay1/4.jpeg) no-repeat center center / cover;
+}
+.cohs1img5{
+    background: url(../IMG/coorg/homestay1/5.jpeg) no-repeat center center / cover;
+}
+.cohs1img6{
+    background: url(../IMG/coorg/homestay1/6.jpeg) no-repeat center center / cover;
+}
+.cohs1img7{
+    background: url(../IMG/coorg/homestay1/7.jpeg) no-repeat center center / cover;
+}
+.cohs1img8{
+    background: url(../IMG/coorg/homestay1/8.jpeg) no-repeat center center / cover;
+}
+.cohs1img9{
+    background: url(../IMG/coorg/homestay1/9.jpeg) no-repeat center center / cover;
+}
+.cohs1img10{
+    background: url(../IMG/coorg/homestay1/10.jpeg) no-repeat center center / cover;
+}
+.cohs1img11{
+    background: url(../IMG/coorg/homestay1/11.jpeg) no-repeat center center / cover;
+}
+.cohs1img12{
+    background: url(../IMG/coorg/homestay1/12.jpeg) no-repeat center center / cover;
+}
+.cohs1img13{
+    background: url(../IMG/coorg/homestay1/13.jpeg) no-repeat center center / cover;
+}
+/* homestay 2 coorg */
+#cohs2{
+    background: url(../IMG/coorg/homestay2/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.cohs2img1{
+    background: url(../IMG/coorg/homestay2/1.jpeg) no-repeat center center / cover;
+}
+.cohs2img2{
+    background: url(../IMG/coorg/homestay2/2.jpeg) no-repeat center center / cover;
+}
+.cohs2img3{
+    background: url(../IMG/coorg/homestay2/3.jpeg) no-repeat center center / cover;
+}
+.cohs2img4{
+    background: url(../IMG/coorg/homestay2/4.jpeg) no-repeat center center / cover;
+}
+.cohs2img5{
+    background: url(../IMG/coorg/homestay2/5.jpeg) no-repeat center center / cover;
+}
+.cohs2img6{
+    background: url(../IMG/coorg/homestay2/6.jpeg) no-repeat center center / cover;
+}
+.cohs2img7{
+    background: url(../IMG/coorg/homestay2/7.jpeg) no-repeat center center / cover;
+}
+.cohs2img8{
+    background: url(../IMG/coorg/homestay2/8.jpeg) no-repeat center center / cover;
+}
+/* coorg homestay 3 */
+#cohs3{
+    background: url(../IMG/coorg/homestay3/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.cohs3img1{
+    background: url(../IMG/coorg/homestay3/1.jpeg) no-repeat center center / cover;
+}
+.cohs3img2{
+    background: url(../IMG/coorg/homestay3/2.jpeg) no-repeat center center / cover;
+}
+.cohs3img3{
+    background: url(../IMG/coorg/homestay3/3.jpeg) no-repeat center center / cover;
+}
+.cohs3img4{
+    background: url(../IMG/coorg/homestay3/4.jpeg) no-repeat center center / cover;
+}
+.cohs3img5{
+    background: url(../IMG/coorg/homestay3/5.jpeg) no-repeat center center / cover;
+}
+.cohs3img6{
+    background: url(../IMG/coorg/homestay3/6.jpeg) no-repeat center center / cover;
+}
+.cohs3img7{
+    background: url(../IMG/coorg/homestay3/7.jpeg) no-repeat center center / cover;
+}
+.cohs3img8{
+    background: url(../IMG/coorg/homestay3/8.jpeg) no-repeat center center / cover;
+}
+/* homestay 4 coorg */
+#cohs4{
+    background: url(../IMG/coorg/homestay4/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.cohs4img1{
+    background: url(../IMG/coorg/homestay4/1.jpeg) no-repeat center center / cover;
+}
+.cohs4img2{
+    background: url(../IMG/coorg/homestay4/2.jpeg) no-repeat center center / cover;
+}
+.cohs4img3{
+    background: url(../IMG/coorg/homestay4/3.jpeg) no-repeat center center / cover;
+}
+.cohs4img4{
+    background: url(../IMG/coorg/homestay4/4.jpeg) no-repeat center center / cover;
+}
+.cohs4img5{
+    background: url(../IMG/coorg/homestay4/5.jpeg) no-repeat center center / cover;
+}
+.cohs4img6{
+    background: url(../IMG/coorg/homestay4/6.jpeg) no-repeat center center / cover;
+}
+.cohs4img7{
+    background: url(../IMG/coorg/homestay4/7.jpeg) no-repeat center center / cover;
+}
+.cohs4img8{
+    background: url(../IMG/coorg/homestay4/8.jpeg) no-repeat center center / cover;
+}
+.cohs4img9{
+    background: url(../IMG/coorg/homestay4/9.jpeg) no-repeat center center / cover;
+}
+.cohs4img10{
+    background: url(../IMG/coorg/homestay4/10.jpeg) no-repeat center center / cover;
+}
+/* homestay 5 coorg */
+#cohs5{
+    background: url(../IMG/coorg/homestay5/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.cohs5img1{
+    background: url(../IMG/coorg/homestay5/1.jpeg) no-repeat center center / cover;
+}
+.cohs5img2{
+    background: url(../IMG/coorg/homestay5/2.jpeg) no-repeat center center / cover;
+}
+.cohs5img3{
+    background: url(../IMG/coorg/homestay5/3.jpeg) no-repeat center center / cover;
+}
+.cohs5img4{
+    background: url(../IMG/coorg/homestay5/4.jpeg) no-repeat center center / cover;
+}
+.cohs5img5{
+    background: url(../IMG/coorg/homestay5/5.jpeg) no-repeat center center / cover;
+}
+.cohs5img6{
+    background: url(../IMG/coorg/homestay5/6.jpeg) no-repeat center center / cover;
+}
+.cohs5img7{
+    background: url(../IMG/coorg/homestay5/7.jpeg) no-repeat center center / cover;
+}
+.cohs5img8{
+    background: url(../IMG/coorg/homestay5/8.jpeg) no-repeat center center / cover;
+}
+/* homestay 6 coorg */
+#cohs6{
+    background: url(../IMG/coorg/homestay6/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.cohs6img1{
+    background: url(../IMG/coorg/homestay6/1.jpeg) no-repeat center center / cover;
+}
+.cohs6img2{
+    background: url(../IMG/coorg/homestay6/2.jpeg) no-repeat center center / cover;
+}
+.cohs6img3{
+    background: url(../IMG/coorg/homestay6/3.jpeg) no-repeat center center / cover;
+}
+.cohs6img4{
+    background: url(../IMG/coorg/homestay6/4.jpeg) no-repeat center center / cover;
+}
+.cohs6img5{
+    background: url(../IMG/coorg/homestay6/5.jpeg) no-repeat center center / cover;
+}
+.cohs6img6{
+    background: url(../IMG/coorg/homestay6/6.jpeg) no-repeat center center / cover;
+}
+.cohs6img7{
+    background: url(../IMG/coorg/homestay6/7.jpeg) no-repeat center center / cover;
+}
+.cohs6img8{
+    background: url(../IMG/coorg/homestay6/8.jpeg) no-repeat center center / cover;
+}
+.cohs6img9{
+    background: url(../IMG/coorg/homestay6/9.jpeg) no-repeat center center / cover;
+}
+/* homestay 7 coorg */
+#cohs7{
+    background: url(../IMG/coorg/homestay7/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.cohs7img1{
+    background: url(../IMG/coorg/homestay7/1.jpeg) no-repeat center center / cover;
+}
+.cohs7img2{
+    background: url(../IMG/coorg/homestay7/2.jpeg) no-repeat center center / cover;
+}
+.cohs7img3{
+    background: url(../IMG/coorg/homestay7/3.jpeg) no-repeat center center / cover;
+}
+.cohs7img4{
+    background: url(../IMG/coorg/homestay7/4.jpeg) no-repeat center center / cover;
+}
+.cohs7img5{
+    background: url(../IMG/coorg/homestay7/5.jpeg) no-repeat center center / cover;
+}
+.cohs7img6{
+    background: url(../IMG/coorg/homestay7/6.jpeg) no-repeat center center / cover;
+}
+.cohs7img7{
+    background: url(../IMG/coorg/homestay7/7.jpeg) no-repeat center center / cover;
+}
+.cohs7img8{
+    background: url(../IMG/coorg/homestay7/8.jpeg) no-repeat center center / cover;
+}
+.cohs7img9{
+    background: url(../IMG/coorg/homestay7/9.jpeg) no-repeat center center / cover;
+}
+/* homestay 8 coorg */
+#cohs8{
+    background: url(../IMG/coorg/homestay8/hs.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.cohs8img1{
+    background: url(../IMG/coorg/homestay8/1.jpeg) no-repeat center center / cover ;
+}
+.cohs8img2{
+    background: url(../IMG/coorg/homestay8/2.jpeg) no-repeat center center / cover ;
+}
+.cohs8img3{
+    background: url(../IMG/coorg/homestay8/3.jpeg) no-repeat center center / cover ;
+}
+.cohs8img4{
+    background: url(../IMG/coorg/homestay8/4.jpeg) no-repeat center center / cover ;
+}
+.cohs8img5{
+    background: url(../IMG/coorg/homestay8/5.jpeg) no-repeat center center / cover ;
+}
+.cohs8img6{
+    background: url(../IMG/coorg/homestay8/6.jpeg) no-repeat center center / cover ;
+}
+.cohs8img7{
+    background: url(../IMG/coorg/homestay8/7.jpeg) no-repeat center center / cover ;
+}
+.cohs8img8{
+    background: url(../IMG/coorg/homestay8/8.jpeg) no-repeat center center / cover ;
+}
+.cohs8img9{
+    background: url(../IMG/coorg/homestay8/9.jpeg) no-repeat center center / cover ;
+}
+.cohs8img10{
+    background: url(../IMG/coorg/homestay8/10.jpeg) no-repeat center center / cover ;
+}
+.cohs8img11{
+    background: url(../IMG/coorg/homestay8/11.jpeg) no-repeat center center / cover ;
+}
+.cohs8img12{
+    background: url(../IMG/coorg/homestay8/12.jpeg) no-repeat center center / cover ;
+}
+/* homestay 9 coorg */
+#cohs9{
+    background: url(../IMG/coorg/homestay9/1.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.cohs9img1{
+    background: url(../IMG/coorg/homestay9/hs.jpeg) no-repeat center center / cover;
+}
+.cohs9img2{
+    background: url(../IMG/coorg/homestay9/2.jpeg) no-repeat center center / cover;
+}
+.cohs9img3{
+    background: url(../IMG/coorg/homestay9/3.jpeg) no-repeat center center / cover;
+}
+.cohs9img4{
+    background: url(../IMG/coorg/homestay9/4.jpeg) no-repeat center center / cover;
+}
+.cohs9img5{
+    background: url(../IMG/coorg/homestay9/5.jpeg) no-repeat center center / cover;
+}
+.cohs9img6{
+    background: url(../IMG/coorg/homestay9/6.jpeg) no-repeat center center / cover;
+}
+.cohs9img7{
+    background: url(../IMG/coorg/homestay9/7.jpeg) no-repeat center center / cover;
+}
+.cohs9img8{
+    background: url(../IMG/coorg/homestay9/8.jpeg) no-repeat center center / cover;
+}
+.cohs9img9{
+    background: url(../IMG/coorg/homestay9/9.jpeg) no-repeat center center / cover;
+}
+/* homestay 10 coorg */
+#cohs10{
+    background: url(../IMG/coorg/homestay10/8.jpeg) center center / cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+.cohs10img1{
+    background: url(../IMG/coorg/homestay10/1.jpeg) no-repeat center center / cover;
+}
+.cohs10img2{
+    background: url(../IMG/coorg/homestay10/2.jpeg) no-repeat center center / cover;
+}
+.cohs10img3{
+    background: url(../IMG/coorg/homestay10/3.jpeg) no-repeat center center / cover;
+}
+.cohs10img4{
+    background: url(../IMG/coorg/homestay10/4.jpeg) no-repeat center center / cover;
+}
+.cohs10img5{
+    background: url(../IMG/coorg/homestay10/5.jpeg) no-repeat center center / cover;
+}
+.cohs10img6{
+    background: url(../IMG/coorg/homestay10/6.jpeg) no-repeat center center / cover;
+}
+.cohs10img7{
+    background: url(../IMG/coorg/homestay10/7.jpeg) no-repeat center center / cover;
+}
+.cohs10img8{
+    background: url(../IMG/coorg/homestay10/8.jpeg) no-repeat center center / cover;
+}
+.cohs10img9{
+    background: url(../IMG/coorg/homestay10/9.jpeg) no-repeat center center / cover;
+}
+.cohs10img10{
+    background: url(../IMG/coorg/homestay10/10.jpeg) no-repeat center center / cover;
+}
+.cohs10img11{
+    background: url(../IMG/coorg/homestay10/11.jpeg) no-repeat center center / cover;
+}
+.cohs10img12{
+    background: url(../IMG/coorg/homestay10/12.jpeg) no-repeat center center / cover;
+}
+/* gokarna */
+/* homesaty1 */
+.gstay1{
+    background: url(../IMG/gokarna.jpg) no-repeat center center / cover;
+}
+/* gokarna homestay1 */
+#ghs1{
+        width: 100vw;
+        height: 100vh;
+        background: url(../IMG/gokarna/hs.jpeg) no-repeat center center / cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+}
+.ghs1img1{
+    background: url(../IMG/gokarna/1.jpeg) no-repeat center center / cover ;
+}
+.ghs1img2{
+    background: url(../IMG/gokarna/2.jpeg) no-repeat center center / cover ;
+}
+.ghs1img3{
+    background: url(../IMG/gokarna/3.jpeg) no-repeat center center / cover ;
+}
+.ghs1img4{
+    background: url(../IMG/gokarna/4.jpeg) no-repeat center center / cover ;
+}
+.ghs1img5{
+    background: url(../IMG/gokarna/5.jpeg) no-repeat center center / cover ;
+}
+.ghs1img6{
+    background: url(../IMG/gokarna/6.jpeg) no-repeat center center / cover ;
+}
+.ghs1img7{
+    background: url(../IMG/gokarna/7.jpeg) no-repeat center center / cover ;
+}
+.ghs1img8{
+    background: url(../IMG/gokarna/8.jpeg) no-repeat center center / cover ;
+}
+.ghs1img9{
+    background: url(../IMG/gokarna/9.jpeg) no-repeat center center / cover ;
+}
+.ghs1img10{
+    background: url(../IMG/gokarna/10.jpeg) no-repeat center center / cover ;
+}
+.ghs1img11{
+    background: url(../IMG/gokarna/11.jpeg) no-repeat center center / cover ;
+}
+/* places */
+/* chikmagulu */
+.align p {
+    text-align: left;
+    width: 90vw;
+    line-height: 1.4;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.align li {
+    text-align: left;
+    line-height: 1.7;
+    margin-left: 15px;
+}
+.align ul{
+    margin-bottom: 15px;
+}
+.pimg{
+    margin: 20px auto;
+}
+.align{
+    text-align: center;
+}
+.up{
+    font-weight: 700;
+}
+/* mullangiri */
+
+.mullayanagiri{
+    background: url(../IMG/pchikmaglur/Mullayanagiri.webp) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* baba */
+.baba{
+    background: url(../IMG/pchikmaglur/bababudangiri.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* bhadra */
+.bhadra{
+    background: url(../IMG/pchikmaglur/BhadraWildlifeSanctuary.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* hebbe */
+.hebbe{
+    background: url(../IMG/pchikmaglur/HebbeFalls.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Kemmangundi */
+.kemmangundi{
+    background: url(../IMG/pchikmaglur/Kemmangundi.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* hirekolale */
+.hirekolale{
+    background: url(../IMG/pchikmaglur/hirekolale.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* coffee */
+.coffee{
+    background: url(../IMG/pchikmaglur/coffee.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* butter false */
+.butter{
+    background: url(../IMG/pchikmaglur/JhariFalls.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* ballalarayana  */
+.ballalarayana{
+    background: url(../IMG/pchikmaglur/BallalarayanaDurga.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* kallathigiri */
+.kallathigiri{
+    background: url(../IMG/pchikmaglur/KallathigiriFalls.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* sringeri  */
+.sringeri{
+    background: url(../IMG/pchikmaglur/SringeriSharadaPeetha.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* z point */
+.z{
+    background: url(../IMG/pchikmaglur/Z\ Point\ Kemmangundi.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* manikyadhara */
+.manikyadhara{
+    background: url(../IMG/pchikmaglur/ManikyadharaFalls.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* chennakesava */
+.chennakesava{
+    background: url(../IMG/pchikmaglur/ChennakesavatempleBelur.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* annapurneshwari */
+.annapurneshwari{
+    background: url(../IMG/pchikmaglur/annapurneshwari.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* hanumana */
+.hanumana{
+    background: url(../IMG/pchikmaglur/HanumanaGundiFalls.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* sirimane */
+.sirimane{
+    background: url(../IMG/pchikmaglur/Sirimane\ Falls.JPG) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* yagachi */
+.yagachi{
+    background: url(../IMG/pchikmaglur/Yagachi\ Dam.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* ayyanakere */
+.ayyanakere{
+    background: url(../IMG/pchikmaglur/ayylake.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* sakleshpur */
+/* manjarabad */
+
+.manjarabad{
+    background: url(../IMG/psakleshpoora/ManjarabadFort.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* sakleshwara */
+.sakleshwara{
+    background: url(../IMG/psakleshpoora/SakleshwaraTemple.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* bisle */
+.bisle{
+    background: url(../IMG/psakleshpoora/BisleviewPoint.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* agni */
+.agni{
+    background: url(../IMG/psakleshpoora/AgniGuddaHill.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* manjehalli */
+.manjehalli{
+    background: url(../IMG/psakleshpoora/ManjehalliWaterfalls.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* kukke */
+.kukke{
+    background: url(../IMG/psakleshpoora/KukkeSubramanyaTemple.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Pandavar Gudda */
+.gudda{
+    background: url(../IMG/psakleshpoora/PandavarGudda.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+
+/* coorg */
+/* abbey fals */
+.abbey{
+    background: url(../IMG/pcoorg/AbbeyFalls.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* irupu */
+.irupu{
+    background: url(../IMG/pcoorg/Irupufalls.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* rajaseat */
+.raja{
+    background: url(../IMG/pcoorg/rajaseat.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* tadiandamol peak */
+.tadiandamol{
+    background: url(../IMG/pcoorg/TadiandamolPeak.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* barapole river  */
+.barapole{
+    background: url(../IMG/pcoorg/BarapoleRiver.jpeg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* dubare park */
+.dubare{
+    background: url(../IMG/pcoorg/DubareElephantcamp.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* brahmagiri hill*/
+.brahmagiri{
+    background: url(../IMG/pcoorg/BrahmagiriHill.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* namdroling Monastery */
+.namdroling{
+    background: url(../IMG/pcoorg/NamdrolingMonasteryBylakuppe.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* nishani motte*/
+.nishani{
+    background: url(../IMG/pcoorg/NishaniMotte.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Chelavara Falls*/
+.chelavara{
+    background: url(../IMG/pcoorg/ChelavaraFalls.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* mallalli Falls*/
+.mallalli{
+    background: url(../IMG/pcoorg/MallalliFalls.jpeg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* pushpagiri wildlife sanctuary */
+.pushpagiri{
+    background: url(../IMG/pcoorg/PushpagiriWildlifeSanctuary.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Kote Betta Hill
+*/
+.kote{
+    background: url(../IMG/pcoorg/KoteBettaHill.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Kumara Parvatha Hill */
+.kumara{
+    background: url(../IMG/pcoorg/KumaraParvathaHill.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* nagarhole park */
+.nagarhole{
+    background: url(../IMG/pcoorg/NagarholeNationalPark.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Omkareshwara Temple*/
+.omkareshwara{
+    background: url(../IMG/pcoorg/OmkareshwaraTemple.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* madikerifort*/
+.madikerifort{
+    background: url(../IMG/pcoorg/MadikeriFort.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* nisargadhama */
+.nisargadhama{
+    background: url(../IMG/pcoorg/Nisargadhama.png) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* honnamana lake */
+.honnamana{
+    background: url(../IMG/pcoorg/HonnamanaKereLake.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* chettalli */
+.chettalli{
+    background: url(../IMG/pcoorg/Chettalli.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* gaddige */
+.gaddige{
+    background: url(../IMG/pcoorg/Gaddige.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Harangi Dam */
+.harangi{
+    background: url(../IMG/pcoorg/HarangiDam.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Mandalpatti */
+.mandalpatti{
+    background: url(../IMG/pcoorg/mandalpatti.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/*nalknad palace */
+.nalknad{
+    background: url(../IMG/pcoorg/NalknadPalace.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Kabbe Hills */
+.kabbe{
+    background: url(../IMG/pcoorg/kabbe.jpeg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Sri Bhagandeshwara Temple */
+.bhagandeshwara{
+    background: url(../IMG/pcoorg/SriBhagandeshwaraTemple.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* talacauvery */
+.talacauvery{
+    background: url(../IMG/pcoorg/Talacauvery&Bhagamandala.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+
+/* gokarna places */
+/* ombeach */
+.om{
+    background: url(../IMG/pgokarna/ombeach.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* mahabaleshwara temple*/
+.mahabaleshwara{
+    background: url(../IMG/pgokarna/mahabaleshwartemple.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* paradise beach*/
+.paradise{
+    background: url(../IMG/pgokarna/paradisebeach.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* Kudlebeach*/
+.kudle{
+    background: url(../IMG/pgokarna/Kudlebeach.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/*watersport*/
+.watersport{
+    background: url(../IMG/pgokarna/watersport.jpeg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* gokarna beach*/
+.gokarnabeach{
+    background: url(../IMG/pgokarna/gokarnabeach.jpeg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/*halfmoon beach*/
+.halfmoon{
+    background: url(../IMG/pgokarna/halfmoon.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* yana cave */
+.yana{
+    background: url(../IMG/pgokarna/yanacaves.jpeg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* mirjan fort */
+.mirjan{
+    background: url(../IMG/pgokarna/MirjanFort.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* city shoping */
+.city{
+    background: url(../IMG/pgokarna/city.jpeg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* oti Tirtha  */
+.oti{
+    background: url(../IMG/pgokarna/otiTirtha.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* nirvana beach */
+.nirvana{
+    background: url(../IMG/pgokarna/nirvana.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* smallhell beach */
+.smallhell{
+    background: url(../IMG/pgokarna/smallhell.jpeg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* belekan beach */
+.belekan{
+    background: url(../IMG/pgokarna/BelekanBeach.jpg) no-repeat center center / cover;
+    height: 300px;
+    width: 400px;
+}
+/* contact */
+#contact{
+    height:100vh;
+    width: 100vw;
+}
+#contact h1{
+    text-align: center;
+    line-height: 2;
+    font-weight: bolder;
+    font-size: 25px;
+}
+label{
+    display: block;
+    line-height: 3;
+    text-align: center;
+    font-size: 20px;
+}
+input,select{
+    display: block;
+    width: 90%;
+    outline: none;
+    border: none;
+    border-bottom: #333 1px solid;
+    height: 30px;
+    text-align: center;
+    margin-left: 5%;
+    font-size: 17px;
+}
+input::placeholder{
+    font-family:'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: lighter;
+}
+select, option,.date{
+    font-family: 'Montserrat', sans-serif ;
+}
+button{
+    width:60%;
+    border: 0.3px #333 solid;
+    height:40px;
+    background: transparent;
+    color: #333;
+    margin-top: 20px;
+    margin-left: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* socials */
+.socials{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.mail{
+    background: url(../mail.svg) no-repeat center center;
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
+.insta{
+    background: url(../insta.svg) no-repeat center center;
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
+.fb{
+    background: url(../fb.svg) no-repeat center center;
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
+.whats{
+    background: url(../whats.svg) no-repeat center center;
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+}
